@@ -25,7 +25,7 @@
 
                                     <div v-if="!confirmation && !step" class="px-4 w-full py-5 sm:p-6">
                                         <h3 class="text-md font-bold leading-6 text-gray-900"><span class="font-extrabold">Use my current location</span></h3>
-                                        <form class="mt-2 sm:flex sm:items-center hidden">
+                                        <form class="mt-2 sm:flex sm:items-center">
                                             <div class="w-full sm:max-w-xs">
                                                 <label for="email" class="sr-only">Email</label>
                                                 <input type="email" name="email" id="email" v-model="form.dropoff" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm" placeholder="you@example.com" />
@@ -40,8 +40,8 @@
                                     <div v-if="confirmation && !step" class="w-full m-4 pt-12 sm:pt-16">
                                         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                                             <div class="mx-auto max-w-4xl text-center">
-                                                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Estimated Delivery</h2>
-                                                <p class="mt-3 text-3xl text-gray-600 sm:mt-4">
+                                                <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Estimated Delivery</h2>
+                                                <p class="mt-3 sm:text-3xl text-gray-600 sm:mt-4">
                                                     <!-- current time + data.time_estimate_minutes, in finnish time -->
                                                     <!-- {{ new Date(Date.now() + (data.time_estimate_minutes * 60000)).toLocaleTimeString('fi-FI', { hour: 'numeric', minute: 'numeric' }) }} -->
                                                     {{ data.dropoff.location.formatted_address }}
@@ -56,7 +56,7 @@
                                                         <dl class="rounded-lg bg-white shadow-lg border border-gray-100 sm:grid sm:grid-cols-2">
                                                             <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                                                                 <dt class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">Euros</dt>
-                                                                <dd class="order-1 text-5xl font-bold text-sky-600">
+                                                                <dd class="order-1  text-2xl sm:text-5xl font-bold text-sky-600">
                                                                     {{
                                                                         // turn cents to euros with 2 decimals, with :.2f
                                                                         (data.fee.amount / 100).toLocaleString('fi-FI', { style: 'currency', currency: 'EUR' })
@@ -65,7 +65,7 @@
                                                             </div>
                                                             <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
                                                                 <dt class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">Minutes</dt>
-                                                                <dd class="order-1 text-5xl font-bold tracking-tight text-sky-600">{{ data.time_estimate_minutes }}</dd>
+                                                                <dd class="order-1 text-2xl sm:text-5xl font-bold tracking-tight text-sky-600">{{ data.time_estimate_minutes }}</dd>
                                                             </div>
                                                         </dl>
                                                     </div>
@@ -118,11 +118,6 @@
                                                                 <div class="mt-1 sm:mt-0">Last updated on 22 Aug 2022</div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="mt-4 sm:mt-0 sm:ml-6 sm:flex-shrink-0">
-                                                        <button type="button" disabled class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm">
-                                                            Edit
-                                                        </button>
                                                     </div>
                                                 </div>
                                                 <div class="mt-5">

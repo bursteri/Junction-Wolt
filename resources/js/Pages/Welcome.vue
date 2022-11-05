@@ -310,25 +310,25 @@ const product = {
         {
             id: 1,
             name: 'Angled view',
-            src: '/storage/img/1.jpeg',
+            src: '/img/1.jpeg',
             alt: 'Angled front view with bag zipped and handles upright.'
         },
         {
             id: 2,
             name: 'Angled view',
-            src: '/storage/img/2.jpeg',
+            src: '/img/2.jpeg',
             alt: 'Angled front view with bag zipped and handles upright.'
         },
         {
             id: 3,
             name: 'Angled view',
-            src: '/storage/img/3.jpeg',
+            src: '/img/3.jpeg',
             alt: 'Angled front view with bag zipped and handles upright.'
         },
         {
             id: 4,
             name: 'Angled view',
-            src: '/storage/img/4.jpeg',
+            src: '/img/4.jpeg',
             alt: 'Angled front view with bag zipped and handles upright.'
         }
         // More images...

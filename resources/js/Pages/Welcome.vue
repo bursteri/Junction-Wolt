@@ -141,8 +141,8 @@
                                         </div>
                                     </div>
                                     <div v-if="externalURL" class="text-center w-full">
-                                        <div class="mt-6">
-                                            
+                                        <div >
+                                            <a :href="externalURL" target="_blank" ref="externalLink" class="font-extrabold underline text-indigo-600 text-center text-xl hover:text-indigo-500">Track your order &#8594</a>
                                         </div>
                                     </div>
                                 </div>
